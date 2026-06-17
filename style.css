@@ -1066,19 +1066,40 @@ img, svg { display: block; max-width: 100%; }
 
   .daily-item {
     grid-template-columns: 1fr auto 100px;
+    padding: 12px 16px;
   }
   .daily-condition { display: none; }
 }
 
 @media (max-width: 480px) {
-  .metrics-grid { grid-template-columns: repeat(2, 1fr); gap: var(--sp-sm); }
-  .temp-value { font-size: 64px; }
-  .daily-item { grid-template-columns: 1fr auto 80px; gap: var(--sp-sm); padding: 12px 16px; }
-  .hourly-item { min-width: 70px; padding: 16px 10px; }
-  .hero-card { padding: var(--sp-lg); }
+  .app-container { padding: 10px 10px var(--sp-2xl); }
+  
+  .metrics-grid { 
+    grid-template-columns: 1fr; /* Stack metrics to 1 column for very small phones */
+    gap: var(--sp-sm); 
+  }
+  
+  .temp-value { font-size: 56px; }
+  .temp-unit { font-size: 24px; margin-top: 8px; }
+  
+  .daily-item { 
+    grid-template-columns: 1fr auto 70px; 
+    gap: 8px; 
+    padding: 10px 12px; 
+  }
+  
+  .hourly-item { min-width: 64px; padding: 12px 8px; }
+  
+  .hero-card { padding: var(--sp-lg) var(--sp-md); }
+  
   .logo-text { display: none; }
-  .skel-row { grid-template-columns: repeat(2, 1fr); }
-  .search-input-wrap { padding: 0 16px; }
+  
+  .skel-row { grid-template-columns: 1fr; }
+  
+  .search-input-wrap { padding: 0 12px; height: 48px; }
+  
+  .empty-hero, .error-card { padding: 40px 16px; }
+  .empty-title { font-size: 24px; }
 }
 
 /* ============================================================
